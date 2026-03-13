@@ -1,0 +1,116 @@
+# .gitignore Universal: PHP (Laravel/Symfony), Python (Django/Flask), JS/TS, Java y SO.
+
+# ==========================================
+# 1. SECRETOS Y CREDENCIALES (CRÍTICO)
+# ==========================================
+# Nunca incluyas secretos/passwords en el código.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+auth.json
+secrets.yml
+# Archivos de configuración local
+docker-compose.override.yml
+
+# ==========================================
+# 2. BASES DE DATOS LOCALES Y UPLOADS
+# ==========================================
+*.sqlite
+*.sqlite3
+db.sqlite3 # Específico de Django
+*.db
+# Archivos subidos por usuarios en desarrollo
+/public/storage/
+/media/ # Django media uploads
+/uploads/
+
+# ==========================================
+# 3. PHP (LARAVEL / SYMFONY / COMPOSER)
+# ==========================================
+/vendor/
+# Laravel
+/public/build/
+/public/hot/
+/storage/*.key
+/storage/logs/
+/storage/framework/
+# Symfony
+/var/cache/
+/var/log/
+/var/sessions/
+/public/bundles/
+.phpunit.result.cache
+
+# ==========================================
+# 4. PYTHON (DJANGO / FLASK / FASTAPI)
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+# Entornos virtuales
+venv/
+.venv/
+env/
+pip-log.txt
+# Empaquetado y Distribución
+build/
+dist/
+*.egg-info/
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# 5. JAVASCRIPT / TYPESCRIPT (NODE / REACT / VUE / ANGULAR)
+# ==========================================
+node_modules/
+/dist/
+/build/
+/out/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# Frameworks
+.next/
+.nuxt/
+.angular/
+.cache/
+coverage/
+
+# ==========================================
+# 6. JAVA / SPRING BOOT (MAVEN / GRADLE)
+# ==========================================
+target/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
+
+# ==========================================
+# 7. SISTEMAS OPERATIVOS Y EDITORES (IDE)
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+# Editores (VS Code, IntelliJ, Eclipse, etc.)
+.vscode/
+.idea/
+*.suo
+*.sln
+*.sw?
+.settings/
+.project
+.classpath
